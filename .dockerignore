@@ -1,0 +1,10 @@
+**/temp
+**/env
+**/.env
+**/venv
+**/.venv
+/__pycache__
+*.md
+LICENCE
+.gitignore
+
