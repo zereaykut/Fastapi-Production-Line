@@ -8,31 +8,25 @@ git clone https://github.com/zereaykut/fastapi_production_line
 cd fastapi_production_line
 ```
 
-Create python environment
+Create docker image
 ```shell
-python -m venv env
+docker build -t production-line-docker-image .
 ```
 
-Activate environment in Mac/Linux 
+Run docker image
 ```shell
-source env/bin/activate
+docker run -d --name production-line-docker-container -p 80:80 production-line-docker-image
 ```
 
-Activate environment in Windows 
-```shell
-.\env\Scripts\activate
-```
-
-Install required packages
-```shell
-pip install -r requirements.txt
-```
-
-Run dashboard
-```shell
-uvicorn main:app --reload
-```
 Application can be accessed from http://127.0.0.1:8000
 
 ## Application Docs
 Application docs can be accessed on http://127.0.0.1:8000/docs
+
+## Note 
+If you see this message:
+```shell
+docker: permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/create": dial unix /var/run/docker.sock: connect: permission denied.
+See 'docker run --help'.
+```
+That's because you need to either run the docker command with sudo or add the user to docker group to run docker commands without sudo.
