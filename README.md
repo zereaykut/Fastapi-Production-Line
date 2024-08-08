@@ -1,11 +1,11 @@
-# fastapi_production_line
+# Fastapi Production Line
 A Rest API apllication that uses fastapi and pydantic in backend.
 
 ## Run Application
 Clone the repo
 ```shell
-git clone https://github.com/zereaykut/fastapi_production_line
-cd fastapi_production_line
+git clone https://github.com/zereaykut/Fastapi-Production-Line
+cd Fastapi-Production-Line
 ```
 
 Create docker image
